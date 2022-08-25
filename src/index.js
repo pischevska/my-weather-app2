@@ -21,6 +21,7 @@ time.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function showTemperature(response) {
   let cityTemperature = document.querySelector("#temperature");
+  celsiusTemperature = response.data.main.temp;
   console.log(cityTemperature);
   console.log(response);
   let temperature = Math.round(celsiusTemperature);
@@ -39,7 +40,7 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  celsiusTemperature = response.data.main.temp;
+  
 }
 
 function cityDisplay(event) {
